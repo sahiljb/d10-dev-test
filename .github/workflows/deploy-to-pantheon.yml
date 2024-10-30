@@ -1,0 +1,21 @@
+name: Deploy to Pantheon
+
+on:
+  push:
+    branches:
+      - main # Trigger on pushes to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: evolvingweb/drupal-fpm:ci-8.1
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Composer
+      run: |
+        composer config -g cache-dir "$(pwd)/.composer-cache"
+        composer self-update --2
+        composer install --no-interaction --prefer-dist --optimize-autoloader
