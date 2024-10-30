@@ -60,6 +60,10 @@ jobs:
         config: ${{ secrets.DEPLOY_SSH_CONFIG }}
         known_hosts: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
 
+    - name: Add server to known_hosts
+      run: |
+        ssh-keyscan -p 2222 codeserver.dev.18a0e30a-b66a-4c8d-9000-d83a48d55975.drush.in >> ~/.ssh/known_hosts
+
     - name: Artifact Deploy
       run: |
         CI_PROJECT_DIR="$(pwd)"
