@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+## Download & import from pantheon
+
+# shellcheck source=.docksal/scripts/common
+. "${PROJECT_ROOT}/.docksal/scripts/common"
+
+# Command entry point.
+__init__() {
+  # Start application.
+  start_application
+
+  case "$1" in
+  db)
+    fin drush sql-sync @dev @self -y
+
+    # Ensure configs are right locally.
+    fin drush cr
+    fin blt drupal:config:import
+    ;;
+  files)
+    ;;
+  *)
+    fin help import
+    ;;
+  esac
+}
+
+# Run the command.
+__init__ "$@"

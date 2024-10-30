@@ -1,0 +1,22 @@
+uuid: e53d83d3-d481-468b-9c0a-fabb098b4b26
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - file
+    - media
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'delete own files'
+  - 'post comments'
+  - 'view media'
+  - 'view media'

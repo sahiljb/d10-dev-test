@@ -1,0 +1,18 @@
+uuid: 3091bce3-f12e-430d-b210-e2cad85d688b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Content
+tags:
+  canonical_url: '[node:url]'
+  dcterms_creator: '[config_page:metatag:field_metatag_creator]'
+  dcterms_date: '[node:bilingual_date_published]'
+  dcterms_description: '[node:improved_summary]'
+  dcterms_language: '[current-page:bilingual_prefix]'
+  dcterms_subject: '[current-page:bilingual_default_value]'
+  dcterms_title: '[node:title]'
+  description: '[node:field_page_description]'
+  title: '[node:title] | [site:name]'

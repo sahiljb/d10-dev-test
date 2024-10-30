@@ -1,0 +1,92 @@
+.header--main {
+  .language-switcher-language-url {
+    @apply h-10 pr-[30px] border-0 border-r border-solid border-r-gray-light;
+    @apply flex items-center;
+
+    ul {
+      @apply list-none p-0 m-0;
+
+      a {
+        @apply no-underline text-black;
+      }
+    }
+  }
+
+  .offcanvas.offcanvas-end {
+    @apply w-3/5;
+
+    .block-menu.menu--main,
+    .block-menu.menu--main-menu-secondary {
+      .menu {
+        @apply md:columns-2 m-0;
+
+        .menu-item {
+          list-style: none;
+
+          a {
+            @apply text-blue-500;
+            @apply py-4 px-3;
+            @apply block;
+
+            &.is-active {
+              @apply font-semibold;
+            }
+          }
+        }
+      }
+    }
+
+    .block-menu.menu--main-menu-secondary {
+      .block-title {
+        @apply px-3 my-4;
+
+        @apply text-lg text-black font-medium;
+      }
+    }
+  }
+
+  .header-search {
+    h2 {
+      @apply hidden;
+    }
+
+    form {
+      .form {
+        @apply flex items-center;
+
+        .form-type-textfield {
+          @apply w-full;
+
+          input {
+            @apply rounded-r-none rounded-l;
+
+            &:focus {
+              @apply outline-none;
+
+              box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+            }
+          }
+        }
+
+        .form-submit {
+          @apply mt-0 bg-yellow border-yellow rounded-bl-none rounded-tl-none w-[85px] h-[37px] text-[0px];
+          @apply bg-no-repeat bg-center;
+
+          background-image: url(/themes/custom/yukonca_glider/src/icons/pictos/search.svg);
+
+          &:hover {
+            @apply bg-yellow-dark border-yellow-dark;
+          }
+        }
+      }
+
+      .fieldgroup {
+        @apply hidden;
+      }
+
+      .form-item-department {
+        @apply hidden;
+      }
+    }
+  }
+}

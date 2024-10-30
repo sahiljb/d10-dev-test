@@ -1,0 +1,41 @@
+uuid: a56cab3a-05bd-4ea2-a584-61ebfc84d307
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - contextual
+    - filter
+    - file
+    - help
+    - linkchecker
+    - node
+    - system
+    - taxonomy
+    - toolbar
+    - workbench_access
+id: team_administrator
+label: 'Team Administrator'
+weight: 8
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access broken links report'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access help pages'
+  - 'access own broken links report'
+  - 'access site in maintenance mode'
+  - 'access toolbar'
+  - 'administer taxonomy'
+  - 'administer users'
+  - 'administer workbench access'
+  - 'assign workbench access'
+  - 'batch update workbench access'
+  - 'delete own files'
+  - 'use text format full_html'
+  - 'use workbench access'
+  - 'view own unpublished content'
+  - 'view the administration theme'
+  - 'view workbench access information'
