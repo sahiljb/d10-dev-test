@@ -18,9 +18,10 @@ jobs:
       - name: Install sshpass
         run: sudo apt-get install -y sshpass
 
-      # Step 3: Add GoDaddy server to known_hosts
+      # Step 3: Ensure the .ssh directory exists and add the server to known_hosts
       - name: Add GoDaddy server to known_hosts
         run: |
+          mkdir -p ~/.ssh
           ssh-keyscan -p 22 ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
       # Step 4: Deploy to GoDaddy cPanel Hosting
