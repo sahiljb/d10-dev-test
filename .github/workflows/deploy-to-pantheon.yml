@@ -6,9 +6,9 @@ on:
       - main # Trigger on pushes to the main branch
 
 env:
-  PANTHEON_SITE: "<site_uuid>" # Replace with your Pantheon site UUID
+  PANTHEON_SITE: "dfe02b7c-7f6e-43a8-b904-7857c00fb706" # Replace with your Pantheon site UUID
   PANTHEON_ENV: "dev" # Set to 'dev', 'test', or 'live'
-  THEME_DIR: docroot/themes/custom/mytheme
+  THEME_DIR: docroot/themes/custom/yukonca_glider
   MYSQL_DATABASE: drupal
   MYSQL_ROOT_PASSWORD: drupal
 
