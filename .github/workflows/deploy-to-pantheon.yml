@@ -37,6 +37,10 @@ jobs:
         cd $CI_PROJECT_DIR
         $BLT validate
         $BLT source:build --ansi --verbose --no-interaction
+    - name: Prepare Deploy Directory
+      run: |
+        mkdir -p deploy  # Ensure deploy directory exists
+
   deploy:
     runs-on: ubuntu-latest
     needs: [build]
